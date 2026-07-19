@@ -117,15 +117,13 @@ function Home() {
           One Direction Forward Inc. provides compassionate professional services for evaluations,
           DUI support, counseling, drug testing, and classes.
         </h1>
-        <div className="relative aspect-[1024/500] overflow-hidden">
-          <img
-            src="/one-direction-forward-banner.png"
-            alt="One Direction Forward Inc. homepage banner with services for DOT SAP, DUI, counseling, drug testing, and classes."
-            width={1024}
-            height={582}
-            className="absolute inset-x-0 top-0 block w-full -translate-y-[11%]"
-          />
-        </div>
+        <img
+          src="/one-direction-forward-banner.png"
+          alt="One Direction Forward Inc. homepage banner with services for DOT SAP, DUI, counseling, drug testing, and classes."
+          width={1024}
+          height={585}
+          className="block w-full"
+        />
       </section>
 
       {/* DOT SAP Cinematic Callout */}
