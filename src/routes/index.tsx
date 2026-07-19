@@ -18,7 +18,6 @@ import { AppointmentCTA } from "@/components/site/CTA";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { PathwayMotif } from "@/components/site/PageHero";
 import { site } from "@/lib/site";
-import providerImg from "@/assets/provider.png.asset.json";
 import communityImg from "@/assets/community.jpg";
 import mediaImg from "@/assets/media.jpg";
 import driverImg from "@/assets/driver.jpg";
@@ -222,7 +221,7 @@ function Home() {
           <div className="relative">
             <div className="absolute -inset-4 rounded-[2rem] bg-[color:var(--aqua)] -z-10" />
             <img
-              src={providerImg.url}
+              src="/kenneth-simpson.png"
               alt="Portrait of Kenneth Simpson Sr., LCSW, SAP, CADC, CAMS-II"
               loading="lazy"
               width={1347}
