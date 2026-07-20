@@ -117,13 +117,121 @@ function Home() {
           One Direction Forward Inc. provides compassionate professional services for evaluations,
           DUI support, counseling, drug testing, and classes.
         </h1>
-        <img
-          src="/one-direction-forward-banner.png"
-          alt="One Direction Forward Inc. homepage banner with services for DOT SAP, DUI, counseling, drug testing, and classes."
-          width={1024}
-          height={585}
-          className="block w-full"
-        />
+        <div className="relative">
+          <img
+            src="/one-direction-forward-banner.png"
+            alt="One Direction Forward Inc. homepage banner with services for DOT SAP, DUI, counseling, drug testing, and classes."
+            width={1024}
+            height={512}
+            className="block w-full"
+          />
+          <BannerLink
+            label="Go to the home page"
+            to="/"
+            left={2.5}
+            top={11.5}
+            width={39}
+            height={24}
+          />
+          <BannerLink
+            label="Learn about DOT SAP services"
+            to="/dot-sap"
+            left={43.5}
+            top={19}
+            width={16}
+            height={36}
+          />
+          <BannerLink
+            label="Learn about DUI services"
+            to="/dui"
+            left={58}
+            top={19}
+            width={14}
+            height={36}
+          />
+          <BannerLink
+            label="Learn about counseling support"
+            to="/counseling"
+            left={71}
+            top={19}
+            width={10}
+            height={36}
+          />
+          <BannerLink
+            label="Learn about drug testing"
+            to="/drug-testing"
+            left={80}
+            top={19}
+            width={11}
+            height={36}
+          />
+          <BannerLink
+            label="Learn about classes and education"
+            to="/classes"
+            left={90}
+            top={19}
+            width={10}
+            height={36}
+          />
+          <BannerLink
+            label="DOT SAP Program"
+            to="/dot-sap"
+            left={3}
+            top={56}
+            width={15}
+            height={12}
+          />
+          <BannerLink label="DUI Services" to="/dui" left={18} top={56} width={13} height={12} />
+          <BannerLink
+            label="Counseling and support"
+            to="/counseling"
+            left={31}
+            top={56}
+            width={16}
+            height={12}
+          />
+          <BannerLink
+            label="Drug Testing"
+            to="/drug-testing"
+            left={47}
+            top={56}
+            width={15}
+            height={12}
+          />
+          <BannerLink
+            label="Classes and education"
+            to="/classes"
+            left={63}
+            top={56}
+            width={18}
+            height={12}
+          />
+          <BannerLink
+            label="Community impact"
+            to="/community-impact"
+            left={82}
+            top={56}
+            width={17}
+            height={12}
+          />
+          <BannerAnchor
+            label={`Call ${site.phone}`}
+            href={site.phoneHref}
+            left={5}
+            top={72}
+            width={31}
+            height={13}
+          />
+          <BannerLink
+            label="Schedule an evaluation"
+            to="/contact"
+            left={41}
+            top={72}
+            width={34}
+            height={13}
+          />
+          <BannerLink label="Book now" to="/contact" left={77} top={72} width={16} height={12} />
+        </div>
       </section>
 
       {/* DOT SAP Cinematic Callout */}
@@ -294,5 +402,67 @@ function Home() {
 
       <AppointmentCTA />
     </>
+  );
+}
+
+function BannerLink({
+  label,
+  to,
+  left,
+  top,
+  width,
+  height,
+}: {
+  label: string;
+  to: string;
+  left: number;
+  top: number;
+  width: number;
+  height: number;
+}) {
+  return (
+    <Link
+      to={to}
+      aria-label={label}
+      title={label}
+      className="absolute rounded-lg transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--gold)]"
+      style={{
+        left: `${left}%`,
+        top: `${top}%`,
+        width: `${width}%`,
+        height: `${height}%`,
+      }}
+    />
+  );
+}
+
+function BannerAnchor({
+  label,
+  href,
+  left,
+  top,
+  width,
+  height,
+}: {
+  label: string;
+  href: string;
+  left: number;
+  top: number;
+  width: number;
+  height: number;
+}) {
+  return (
+    <a
+      href={href}
+      aria-label={label}
+      title={label}
+      className="absolute rounded-lg transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--gold)]"
+      style={{
+        left: `${left}%`,
+        top: `${top}%`,
+        width: `${width}%`,
+        height: `${height}%`,
+      }}
+    />
   );
 }
