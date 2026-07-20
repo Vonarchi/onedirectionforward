@@ -86,6 +86,9 @@ const localBusinessJsonLd = {
   medicalSpecialty: ["Psychiatric", "AddictionMedicine"],
 };
 
+const bannerPreviewImage =
+  "https://onedirectionforward.vercel.app/one-direction-forward-banner.png";
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
@@ -105,7 +108,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content: "Confidential support. Professional guidance. A clear way forward.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: bannerPreviewImage },
+      { property: "og:image:width", content: "1024" },
+      { property: "og:image:height", content: "512" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: bannerPreviewImage },
+      {
+        name: "twitter:image:alt",
+        content: "One Direction Forward Inc. services banner.",
+      },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

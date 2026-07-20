@@ -40,9 +40,15 @@ export const Route = createFileRoute("/")({
         content: "Confidential Support. Professional Guidance. A Clear Way Forward.",
       },
       { property: "og:url", content: "/" },
-      { property: "og:image", content: "/one-direction-forward-banner.png" },
+      { property: "og:image", content: bannerPreviewImage },
+      { property: "og:image:width", content: "1024" },
+      { property: "og:image:height", content: "512" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: "/one-direction-forward-banner.png" },
+      { name: "twitter:image", content: bannerPreviewImage },
+      {
+        name: "twitter:image:alt",
+        content: "One Direction Forward Inc. services banner.",
+      },
     ],
     links: [{ rel: "canonical", href: "/" }],
   }),
@@ -107,6 +113,9 @@ const impact = [
   { img: classesImg, title: "Professional workshops" },
   { img: counselingImg, title: "Community outreach" },
 ];
+
+const bannerPreviewImage =
+  "https://onedirectionforward.vercel.app/one-direction-forward-banner.png";
 
 function Home() {
   return (
